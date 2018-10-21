@@ -17,10 +17,8 @@ mlab_prod_uri=
 // 3 sets below based on string key and an options key specifically for prop replicaSet is associated with respective key
 atlas_tests_clusterM0_userm001Basic_url=
 atlas_tests_clusterM0_userm001Basic_replicaSet=
-atlas_dev_clusterM0_userm001Basic_url=
-atlas_dev_clusterM0_userm001Basic_replicaSet=
-altas_prod_clusterM0_userm001Basic_url=
-atlas__clusterM0_userm001Basic_replicaSet=
+atlas_clusterM0_userm001Basic_url=
+atlas_clusterM0_userm001Basic_replicaSet=
 
 // arbitrary but needed to decryption of cookie session
 cookie_session_key=
