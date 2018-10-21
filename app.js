@@ -1,8 +1,6 @@
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").load();
-}
 var createError = require("http-errors");
 var express = require("express");
+require("./models/db")
 var router = express.Router();
 let app = express();
 var path = require("path");
@@ -14,26 +12,6 @@ var indexRouter = require("./routes/index");
 require("./models/Users");
 require("./config/cookie-session")(app);
 require("./config/passport")(app);
-
-// db
-mongoose.connect(
-  process.env.atlas_dev_clusterM0_userm001Basic_url,
-  {
-    useNewUrlParser: true,
-    replicaSet: process.env.atlas_dev_clusterM0_userm001Basic_replicaSet,
-    ssl: true,
-    authSource: "admin",
-    retryWrites: true
-  }
-);
-
-mongoose.connection
-  .once("open", () => {
-    console.log("connection established with mongoose driver");
-  })
-  .on("error", error => {
-    console.warn("Warning on connection attempt", error);
-  });
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
