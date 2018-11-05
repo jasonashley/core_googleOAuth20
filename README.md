@@ -36,7 +36,12 @@ Current endponts
 
  // basic usage
  GET /api/logout
- GET /home
+ GET /home // protected page
+ 
+// registered base urls at google app
+// Authorized JavaScript origins : http://localhost:5000
+// Authorized redirect URIs  :      http://localhost:5000/auth/google/callback
+
 ```
 
 - see package.json for details
